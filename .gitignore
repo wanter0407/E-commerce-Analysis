@@ -1,0 +1,29 @@
+# Python相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# 数据文件（如果数据集很大，可以不上传）
+# data/*.csv  # 如果CSV文件很大，取消注释这行
+# data/*.db   # 如果SQLite数据库很大，取消注释这行
+
+# 操作系统相关
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE相关
+.vscode/
+.idea/
+*.swp
+*.swo
