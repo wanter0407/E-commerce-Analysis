@@ -929,19 +929,21 @@ Q1(Week 1-12)市场调研与试点运营,Q2-Q3(Week 13-36)规模化推广,Q4(Wee
 
 **报告配套材料**（GitHub仓库）：
 
-```
+```bash
 E-commerce-Analysis/
-├── README.md                           # 项目介绍
-├── E-commerce_Analysis_Report.md       # 本报告（Markdown版）
-├── E-commerce_Analysis_Report.pdf      # 本报告（PDF版）
+├── README.md                               # 项目介绍
+├── E-commerce Analysis Report.md           # 完整分析报告（Markdown版）
+├── E-commerce Analysis Report.pdf          # 完整分析报告（PDF版）
 ├── notebooks/
-│   ├── 01_data_cleaning.ipynb          # 数据清洗代码
-│   ├── 02_indicator_analysis.ipynb     # 10个指标分析代码
-│   └── 03_visualization.ipynb          # 可视化代码
+│   └── E-commerce_Analysis.ipynb           # 完整数据分析代码（清洗+10个指标+可视化）
 ├── results/
-│   ├── *.csv                           # 所有指标结果文件
-│   └── viz_*.png                       # 所有图表
+│   ├── 1_monthly_sales.csv                 # 月度销售数据
+│   ├── ......
+│   ├── 5_customer_spending.csv             # 客户消费数据
+│   ├── 8_rfm_analysis.csv                  # RFM客户分层
+│   ├── 10_customer_ltv.csv                 # 客户生命周期价值
+│   └── viz_*.png                           # 所有可视化图表（10+张）
 ├── data/
-│   └── ecommerce.db                    # SQLite数据库（清洗后）
-└── requirements.txt                    # Python依赖包
+│   └── data.csv                            # 原始数据集
+└── requirements.txt                        # Python依赖包清单
 ```
