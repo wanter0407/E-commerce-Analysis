@@ -33,45 +33,129 @@ E-commerce-Analysis/
 │   └── viz_*.png                           # 所有可视化图表（10+张）
 ├── data/
 │   └── data.csv                            # 原始数据集
+│   └── ecommerce.db                        # 生成的数据库
 └── requirements.txt                        # Python依赖包清单
 ```
 
-------
-
 ## 🚀 快速开始
 
-### 1. 克隆项目
+### 📍 第一步：克隆项目到本地
 
 ```bash
+# 1. 打开命令行工具
+# Windows: 按 Win+R，输入 cmd 或 powershell
+# Mac: 打开 Terminal
+# Linux: 打开终端
+
+# 2. 切换到你想要存放项目的位置（根据你的需要修改路径）
+# 例如：将项目放在 D 盘根目录
+cd D:\
+
+# 或者：将项目放在用户文档文件夹
+cd C:\Users\你的用户名\Documents
+
+# Mac/Linux 示例：
+cd ~/Documents
+
+# 3. 克隆项目
 git clone https://github.com/wanter0407/E-commerce-Analysis.git
+
+# 4. 进入项目根目录（重要！）
 cd E-commerce-Analysis
+
+# 5. 验证当前位置（可选，确认你在正确的目录）
+# Windows:
+cd
+# Mac/Linux:
+pwd
 ```
 
-### 2. 安装依赖
+**✅ 确认你的命令行显示**：
 
 ```bash
-# 创建虚拟环境（推荐）
-python -m venv venv
-source venv/bin/activate  # Windows用: venv\Scripts\activate
+# 应该类似这样（根据你实际存放的位置）
+D:\E-commerce-Analysis
+# 或
+C:\Users\张三\Documents\E-commerce-Analysis
+```
 
-# 安装依赖包
+------
+
+### 📦 第二步：安装依赖
+
+```bash
+# 确保仍在项目根目录（E-commerce-Analysis）
+# 直接安装依赖包
 pip install -r requirements.txt
 ```
 
-### 3. 运行分析
+**预期输出**：
 
 ```bash
-# 启动Jupyter Notebook
-jupyter notebook
-
-# 打开并运行 notebooks/E-commerce_Analysis.ipynb
-# 按顺序执行所有单元格即可完成：
-# 1. 数据清洗与数据库创建
-# 2. 销售增长与结构分析（指标1-4）
-# 3. 客户价值深度分析（指标5-10）
+Successfully installed pandas-2.2.2 numpy-1.26.4 matplotlib-3.9.2 ...
 ```
 
 ------
+
+### 🚀 第三步：运行分析
+
+#### **启动 Jupyter Notebook**
+
+```bash
+# 1. 确认仍在项目根目录（E-commerce-Analysis）
+# Windows:
+cd
+# Mac/Linux:
+pwd
+
+# 应该显示类似：D:\E-commerce-Analysis
+
+# 2. 直接启动 Jupyter
+jupyter notebook
+
+# 系统会自动打开浏览器，显示项目文件夹
+# 在浏览器中点击 notebooks/ 文件夹，然后打开 E-commerce_Analysis.ipynb
+```
+
+------
+
+#### **在 Jupyter 界面中运行分析**
+
+**在 Jupyter 界面中**：
+
+1. **打开 notebook**：点击 `E-commerce_Analysis.ipynb`
+2. **运行分析**（三种方式）：
+   - **方式A**：点击顶部菜单 `Cell` → `Run All`（一次运行所有单元格）
+   - **方式B**：逐个单元格执行，按 `Shift + Enter`
+   - **方式C**：点击工具栏的 `▶️ Run` 按钮
+
+------
+
+### ✨ 特别说明
+
+- ✅ **代码使用智能路径检测**：无论从哪个目录启动 Jupyter，代码都会自动识别项目根目录
+- ✅ **跨平台兼容**：在 Windows/Mac/Linux 上均可直接运行
+- ✅ **零配置启动**：克隆项目后直接运行，无需修改任何代码
+
+------
+
+### 📊 代码运行流程
+
+1. **自动路径检测** - 智能识别项目结构，自动设置数据和输出路径
+2. **数据清洗与数据库创建** - 生成 `data/ecommerce.db`
+3. **销售增长与结构分析**（指标1-4）- 生成可视化图表至 `results/`
+4. **客户价值深度分析**（指标5-10）- 生成分析结果CSV至 `results/`
+
+**自动生成的文件位置**：
+
+```bash
+E-commerce-Analysis/
+├── data/
+│   └── ecommerce.db                    ← 自动生成的数据库
+└── results/
+    ├── viz_*.png                       ← 自动生成的可视化图表（10+张）
+    └── *.csv                           ← 自动生成的分析结果文件
+```
 
 ## 📊 核心分析指标
 
